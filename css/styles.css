@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box; /* Opera/IE 8+ */
+    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+   /* box-sizing est appliqué à tous les éléments */
+   }
+
+   @viewport { 
+    width: device-width; 
+    zoom: 1; 
+}
+ 
+body {
+    width: 1200px;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+#box {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+    margin: auto;
+}
+.gras {
+    font-weight: bold;
+}
