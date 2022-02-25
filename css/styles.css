@@ -5,23 +5,123 @@
    /* box-sizing est appliqué à tous les éléments */
    }
 
-   @viewport { 
+@viewport { 
     width: device-width; 
     zoom: 1; 
 }
- 
+
+/* DESKTOP */
+@media screen and (min-width: 992px) {
+    body {
+        width: 1100px;
+    }
+    header {
+        height: 100px;
+        align-items: flex-end;
+    }
+
+    header picture img {
+        max-width: 60%;
+    }
+    nav {
+        width: 190px;
+        align-self: flex-start;
+    }
+    nav a {
+        padding-top: 20%;
+        border-top: solid 3px rgb(255, 255, 255);
+    }
+    nav a:hover{
+        border-top: solid 3px rgb(31, 118, 248);
+    }
+}
+/* FIN DESKTOP */
+
+
+/* TABLET */
+@media all and (min-width: 768px) and (max-width: 992px) {
+    body {
+        width: auto;
+    }
+    header {
+        height: 100px;
+        align-items: flex-end;
+    }
+
+    header picture img {
+        max-width: 60%;
+    }
+    nav {
+        width: 190px;
+        align-self: flex-start;
+    }
+    nav a {
+        padding-top: 20%;
+        border-top: solid 3px rgb(255, 255, 255);
+    }
+    nav a:hover{
+        border-top: solid 3px rgb(31, 118, 248);
+    }
+}
+/* FIN TABLET */
+
+
+/* MOBILE */
+@media all and (max-width: 768px) {
+    body {
+        width: auto;
+    }
+    header {
+        height: 100px;
+        flex-direction: column;   
+    }
+    header picture img {
+        max-width: 30%;
+    }
+    nav a {
+        padding-top: 10%;
+        padding-bottom: 3%;
+        border-bottom: solid 3px rgb(224, 224, 224);
+    }
+    nav a:hover{
+        border-bottom: solid 3px rgb(31, 118, 248);
+    }
+}
+/* FIN MOBILE */
+
+/* PAGE */
 body {
-    width: 1200px;
     margin: auto;
+    height: auto;
     font-family: 'Roboto', sans-serif;
 }
-#box {
+/* HEADER */
+header {
     display: flex;
-    flex-direction: column;
-    width: 500px;
-    align-items: center;
-    margin: auto;
+    justify-content: space-between;
 }
-.gras {
-    font-weight: bold;
+header picture {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Barre de nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+nav a {
+    width: 50%;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+nav a:hover{
+    width: 50%;
+    height: auto;
+    text-align: center;
+    color: rgb(31, 118, 248);
+    text-decoration: none;
 }
