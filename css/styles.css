@@ -13,7 +13,7 @@
 /* DESKTOP */
 @media screen and (min-width: 992px) {
     body {
-        width: 1100px;
+        width: 70%;
     }
     header {
         height: 100px;
@@ -29,10 +29,13 @@
     }
     nav a {
         padding-top: 20%;
-        border-top: solid 3px rgb(255, 255, 255);
+        border-top: solid 3px #F2F2F2;
     }
     nav a:hover{
-        border-top: solid 3px rgb(31, 118, 248);
+        border-top: solid 3px #0065FC;
+    }
+    #button_r {
+        display: none;
     }
 }
 /* FIN DESKTOP */
@@ -41,7 +44,7 @@
 /* TABLET */
 @media all and (min-width: 768px) and (max-width: 992px) {
     body {
-        width: auto;
+        width: 90%;
     }
     header {
         height: 100px;
@@ -57,34 +60,44 @@
     }
     nav a {
         padding-top: 20%;
-        border-top: solid 3px rgb(255, 255, 255);
+        border-top: solid 3px #F2F2F2;
     }
     nav a:hover{
-        border-top: solid 3px rgb(31, 118, 248);
+        border-top: solid 3px #0065FC;
+    }
+    #button_r {
+        display: none;
     }
 }
+
 /* FIN TABLET */
 
 
 /* MOBILE */
-@media all and (max-width: 768px) {
-    body {
-        width: auto;
+@media all and (max-width: 767px) {
+
+    section {
+        margin: 5%;
     }
     header {
-        height: 100px;
         flex-direction: column;   
     }
     header picture img {
         max-width: 30%;
     }
     nav a {
-        padding-top: 10%;
+        padding-top: 5%;
         padding-bottom: 3%;
-        border-bottom: solid 3px rgb(224, 224, 224);
+        border-bottom: solid 3px #F2F2F2;
     }
     nav a:hover{
-        border-bottom: solid 3px rgb(31, 118, 248);
+        border-bottom: solid 3px #0065FC;
+    }
+    #button_r {
+    border-radius: 12px;
+    }
+    #button {
+        display: none;
     }
 }
 /* FIN MOBILE */
@@ -92,9 +105,10 @@
 /* PAGE */
 body {
     margin: auto;
-    height: auto;
     font-family: 'Roboto', sans-serif;
 }
+
+
 /* HEADER */
 header {
     display: flex;
@@ -119,9 +133,45 @@ nav a {
     color: black;
 }
 nav a:hover{
-    width: 50%;
-    height: auto;
+    color: #0065FC;
+}
+
+/* Barre de recherche */
+.sigle {
+    border: solid 1px #DEEBFF;
+    background-color: #DEEBFF;
+    width: 40px;
+    height: 40px;    
+    padding: 10px;
     text-align: center;
-    color: rgb(31, 118, 248);
-    text-decoration: none;
+    font-weight: bold;
+}
+
+#location {
+    background-color: #F2F2F2;
+    border: solid 1px #F2F2F2;
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 30%;
+}
+
+#search {
+    position: relative;
+    border: solid 1px #F2F2F2;
+    height: 40px;
+    left: -5px;
+    top: 1px;
+    padding-left: 1%;
+    color: black;
+    font-weight: bold;
+}
+
+.button {
+    background-color: #0065FC;
+    border: solid 1px #0065FC;
+    color: white;
+    width: auto;
+    position: relative;
+    left: -20px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
