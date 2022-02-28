@@ -13,7 +13,7 @@
 /* DESKTOP */
 @media screen and (min-width: 992px) {
     body {
-        width: 70%;
+        width: 60%;
     }
     header {
         height: 100px;
@@ -68,6 +68,9 @@
     #button_r {
         display: none;
     }
+    #zone {
+        flex-direction: column;
+    }
 }
 
 /* FIN TABLET */
@@ -98,6 +101,9 @@
     }
     #button {
         display: none;
+    }
+    #zone {
+    flex-direction: column;
     }
 }
 /* FIN MOBILE */
@@ -174,4 +180,49 @@ nav a:hover{
     left: -20px;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+}
+
+/* FILTRES */
+#zone {
+    display: flex;
+    justify-content: left;
+    font-weight: bold;
+}
+
+.filtres {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.filtre {
+    display: flex;
+    margin-left: 2%;
+}
+
+.filtre .sigle {
+    border-radius: 50%;
+    color: #0065FC;
+}
+
+.filtre p {
+    border : solid 2px #DEEBFF; 
+    border-left: hidden;
+    border-top-right-radius: 20em;
+    border-bottom-right-radius: 20em;
+    margin: 0px 0px 10px -20px;
+    padding: 9px 10px 9px 25px;
+}
+
+/* Info */
+#info {
+    display: flex;
+    align-items: baseline;
+}
+#info_icon {
+    border: solid 1px #DEEBFF;
+    color: #0065FC;
+    font-size: 13px;
+    border-radius: 50%;
+    padding: 4px 8px;
+    margin-right: 10px;
 }
