@@ -1,0 +1,8 @@
+/* TABLET */
+@media all and (max-width: 992px) {
+    #zone {
+        flex-direction: column;
+    }
+}
+
+/* FIN TABLET */
