@@ -1,8 +1,46 @@
 /* TABLET */
 @media all and (max-width: 992px) {
+    /* FILTRES */
     #zone {
         flex-direction: column;
+    }
+    .filtre p {
+        margin-bottom: 0px;
+    }
+    
+    /* CONTAINER */
+    .container {
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    /* SECTIONS */
+    #heberg, #popu {
+        padding: 12px;
+    }
+    #heberg {
+        width: 90%;
+    }  
+    #popu {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .popu_1 {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        height: auto;
+    }
+
+    /* SECTION POPULAIRE */
+    #popu .card {
+        width: 210px;
+    }
+    #popu .card-body {
+        padding-left: 0px;
     }
 }
 
 /* FIN TABLET */
+
