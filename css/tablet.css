@@ -8,22 +8,17 @@
         margin-bottom: 0px;
     }
     
-    /* CONTAINER */
-    .container {
+    /* HEBERGEMENTS */
+    #accommodation {
         justify-content: space-between;
         flex-direction: column-reverse;
         align-items: center;
     }
-
-    /* SECTIONS */
     #heberg, #popu {
         padding: 12px;
     }
-    #heberg {
-        width: 90%;
-    }  
-    #popu {
-        width: 90%;
+    #popu, #heberg  {
+        width: 100%;
         margin-bottom: 20px;
     }
     .popu_1 {
@@ -35,12 +30,32 @@
 
     /* SECTION POPULAIRE */
     #popu .card {
-        width: 210px;
+        width: 235px;
     }
-    #popu .card-body {
-        padding-left: 0px;
+
+    /* ACTIVITES */
+    #activities {
+        height: 600px;
+    }
+    #activities p {
+        margin-top: -52px;
+        padding: 17px 15px;
+    }
+    .container {
+        width: 45%;
+        margin: auto;
+    }
+    .t1, .t2, .t3, .t4, .t5 {
+        height: 180px;
+    }
+
+    /* FOOTER */
+    #footer {
+        width: 100%;
+    }
+    footer div {
+        width: auto;
     }
 }
 
 /* FIN TABLET */
-
