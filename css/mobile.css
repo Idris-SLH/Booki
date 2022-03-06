@@ -3,8 +3,8 @@
     /* PAGE */
     body {
         padding: 0px;
-        font-size: medium;
     }
+
     section {
         padding: 0px 15px;
     }
@@ -49,76 +49,45 @@
         display: none;
     }
 
-    /* FILTRES */
-    #zone, .heberg {
+    .heb_1, .heb_2, .popu_1, #zone, .heberg {
         flex-direction: column;
     }
+
+    /* FILTRES */
     .filtre {
         margin: 0px 10px 10px 0px;
     }
-
-    .card {
-        display: flex;
-        background-color: white;
-        box-shadow: 0px 0px 20px #d3d3d3;
-        border-radius: 20px;
-        margin-bottom: 20px;
+    .card-body {
+    font-size: medium;
     }
-    .card-star  {
-        font-size: medium;
+    .card-star {
+        font-size: smaller;
     }
 
     /* HEBERGEMENTS */
     #heberg, #popu {
         border-radius: 0px;
     }
-    #heberg .card-image img {
-        width: 100%;
-        height: 110px;
-        border-top-right-radius: 20px;
-    }
-    #heberg .card-body {
-        font-size: medium;
-    }
     #accommodation {
-        height: auto;
         padding: 0px;
     }
-    .heb_1, .heb_2 {
-    flex-direction: column;
-    }
-    .popu_1 {
-        flex-direction: column;
-        height: auto;
-    }
-    #popu {
-        width: 100%;
-    }
-    #popu .card {
-        width: 100%;
-        height: 160px;
-    }
-    #popu .card-image img {
-        height: 160px;
-        width: 160px;
-        border-bottom-left-radius: 20px;
-    }
+    
 
+    #popu .card {
+        height: 130px;
+    }
+    #popu .card-image {
+        min-width: 40%;
+    }
     #heberg {
         width: 100%;
         background-color: white;
     }
-    .texte {
-        font-size: medium;
-    }
 
     /* ACTIVITES */
     #activities {
-        height: auto;
-    }
-    #activities {
         flex-wrap: nowrap;
-        height: auto;
+        flex-direction: column;
     }
     .container {
         width: 100%;
@@ -132,6 +101,7 @@
     }
     footer div {
         width: 300px;
+        padding: 14px;
     }
 }
 /* FIN MOBILE */
