@@ -3,11 +3,9 @@
     box-sizing: border-box; /* Opera/IE 8+ */
     -moz-box-sizing: border-box; /* Firefox, autres Gecko */
     -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
-   /* box-sizing est appliqué à tous les éléments */
+   /* box-sizing est appliquÃƒÂ© ÃƒÂ  tous les ÃƒÂ©lÃƒÂ©ments */
 }
 @viewport { 
-    width: device-width; 
-    zoom: 1; 
 }
 body {
     max-width: 1100px;
@@ -19,6 +17,9 @@ a {
     text-decoration: none;
     color: black;
 }
+.button, .filter, li, picture {
+    cursor: pointer;
+}
 
 
 /* HEADER */
@@ -29,11 +30,11 @@ header {
     align-items: flex-end;
 }
 header picture {
-    display: flex; /* A suppr */
+    display: flex;
     padding-left: 15px;
 }
 header picture img {
-    max-width: 50%;
+    max-width: 51%;
 }
 
 
@@ -56,30 +57,30 @@ nav a:hover{
 
 
 /* BARRE DE RECHERCHE */
-.sigle {
-    border: solid 1px #DEEBFF;
-    background-color: #DEEBFF;
-    width: 35px;
-    height: 35px;
-    padding-top: 10px;
-    text-align: center;
-    font-weight: bold;
-    overflow: overlay;
+#search_bar p {
+    width: 80%;
+    display: flex;
 }
 #location {
     background-color: #F2F2F2;
     border: solid 1px #F2F2F2;
     border-top-left-radius: 30%;
     border-bottom-left-radius: 30%;
+    position: inherit;
 }
-#search {
-    position: relative;
-    border: solid 1px #F2F2F2;
+.sigle {
+    border: solid 1px #DEEBFF;
+    background-color: #DEEBFF;
+    width: 35px;
     height: 35px;
-    left: -5px;
-    top: -12px;
-    padding-left: 1%;
-    color: black;
+    padding-top: 8px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+}
+#search_box {
+    border: solid 1px #F2F2F2;
+    padding-left: 10px;
     font-weight: bold;
 }
 .button {
@@ -87,50 +88,54 @@ nav a:hover{
     border: solid 1px #0065FC;
     color: white;
     width: auto;
-    position: relative;
-    left: -25px;
-    top: -13px;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
-    padding-top: 0px;
+    padding-top: 2px;
+    position: inherit;
 }
-#button_r {
+.button:hover {
+    background-color: #0357d6;
+    border: solid 1px #0357d6;
+}
+#search_button_r {
     display: none;
 }
 
 
 /* FILTRES */
-#zone {
+#filter_zone {
     display: flex;
-    justify-content: left;
     font-weight: bold;
 }
-.filtres {
+#filter_box {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
-.filtre {
-    display: flex;
-    margin-left: 20px;
+.filter {
+    margin: auto 10px;
 }
-.filtre .sigle {
+.filter .sigle {
     border-radius: 50%;
     color: #0065FC;
 }
-.filtre p {
+.filter p {
     border: solid 2px #F2F2F2;
-    border-left: hidden;
     border-top-right-radius: 20em;
     border-bottom-right-radius: 20em;
-    margin: 0px 0px 14px -20px;
-    padding: 8px 10px 0px 25px;
+    margin: 0px 0px 0px 15px;
+    padding: 6px 10px 6px 25px;
+}
+.filter p:hover {
+    background-color: #F2F2F2;    
 }
 
+
 /* INFO */
-#info {
+#info_box {
     display: flex;
     align-items: baseline;
+    font-size: smaller;
 }
 #info_icon {
     border: solid 1px #DEEBFF;
@@ -141,47 +146,94 @@ nav a:hover{
     margin-right: 10px;
 }
 
-/* HEBERGEMENTS */
-#accommodation {
+
+/* SECTIONS HEBERGEMENTS */
+#accommodation_marseille {
     display: flex;
     justify-content: space-between;
 }
-#accommodation a {
+#accommodation_marseille a {
     width: 100%;
     margin: 5px;
 }
-
-/* SECTIONS */
-#heberg, #popu {
-    background-color: #F2F2F2;
-    padding: 20px;
-    border-radius: 20px;
-}
-#heberg {
-    width: 65%;
-}
-#popu {
-    width: 30%;
-}
-.popu_1 {
-    display: flex;
-    flex-direction: column;
-}
-#accommodation h3, #accommodation h2 {
+#accommodation_marseille h3, h2 {
     padding-left: 10px;
     font-weight: bolder;
     align-self: flex-start;
 }
-.titre {
+#accommodation_marseille h4 {
+    font-weight: bolder; 
+}
+#accommodation, #populare {
+    background-color: #F2F2F2;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+/* SECTION HEBERGEMENT */
+#accommodation {
+    width: 65%;
+}
+.accommodation_card {
+    display: flex;
+}
+#accommodation .card {
+    flex-direction: column;
+    height: 160px;
+}
+#accommodation .card-image {
+    height: 65%;
+}
+#accommodation .card-image img {
+    border-top-right-radius: 20px;
+}
+#accommodation .card-body {
+    padding: 0px 0px 6px 11px;
+    margin-top: -8px;
+    line-height: 0px;
+}
+#show_more {
+    margin: 0px;
+}
+
+
+/* SECTION POPULAIRE */
+#populare {
+    width: 30%;
+}
+#title {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.titre i {
+#title i {
     font-size: 20px;
 }
+#populare_card {
+    display: flex;
+    flex-direction: column;
+}
+#populare .card {
+    height: 115px;
+}
+#populare .card-image {
+    min-width: 45%;
+    width: 45%;
+}
+#populare .card-image img {
+    border-bottom-left-radius: 20px;
+}
+#populare .card-body {
+    padding: 0px 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
 
-/* CARD */
+
+/* CARTES */
 .card {
     display: flex;
     background-color: white;
@@ -199,10 +251,6 @@ nav a:hover{
 .card-body {
     font-size: smaller;
 }
-#accommodation h4 {
-    font-weight: bolder; 
-}
-
 .card-star  {
     color: #0065FC;
     font-size: xx-small;
@@ -210,46 +258,9 @@ nav a:hover{
 .blank {
     color: #F2F2F2;
 }
-
-
-
-/* SECTION HEBERGEMENTS */
-.heb_1, .heb_2 {
-    display: flex;
-}
-#heberg .card {
-    flex-direction: column;
-    height: 190px;
-}
-#heberg .card-image {
-    height: 65%;
-}
-#heberg .card-image img {
-    border-top-right-radius: 20px;
-}
-#heberg .card-body {
-    padding: 0px 0px 6px 11px;
-    margin-top: -8px;
-    line-height: 0px;
-}
-
-
-/* SECTION POPULAIRE */
-#popu .card {
-    height: 115px;
-}
-#popu .card-image {
-    min-width: 45%;
-}
-#popu .card-image img {
-    border-bottom-left-radius: 20px;
-}
-#popu .card-body {
-    padding: 0px 5px 5px 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
+.card:hover, .container_box:hover, header picture img:hover {
+    transform: scale(1.03);
+    transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.2s; 
 }
 
 
@@ -265,29 +276,28 @@ nav a:hover{
 #activities a {
     display: contents;
 }
-.container {
+.container_box {
     width: 235px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 18px;
 }
-.corps {
+.container {
     height: 100%;
     overflow: hidden;
     box-shadow: 0px 0px 12px #cecece;
     border-radius: 18px;
+    position: relative;
 }
-.corps img {
+.container_box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 #activities p {
-    overflow: overlay;
     background-color: white;
     margin-top: -45px;
-    padding: 12px 15px;
+    padding: 12px;
     font-weight: bolder;
+    position: absolute;
+    width: 100%;
 }
 .t1 {
     height: 100%;
@@ -315,17 +325,22 @@ footer {
     position: absolute;
     left: 0;
 }
-#footer {
+#footer_box {
     display: flex;
     width: 1100px;
     justify-content: space-around;
     padding: 20px 0px;
 }
+footer p {
+    font-weight: bold;
+}
 ul {
     padding-left: 0px;
-    font-weight: bold;
 }
 li {
     list-style-type: none;
-    line-height: 25px;
+    line-height: 30px;
+}
+li:hover {
+    font-weight: bold;
 }

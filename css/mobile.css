@@ -1,12 +1,14 @@
 /* MOBILE */
-@media all and (max-width: 767px) {
+@media (max-width: 767px) {
     /* PAGE */
     body {
         padding: 0px;
     }
-
     section {
         padding: 0px 15px;
+    }
+    #accommodation, .accommodation_card, #populare_card, #filter_zone {
+        flex-direction: column;
     }
 
     /* HEADER */
@@ -38,69 +40,77 @@
     }
     
     /* BARRE DE RECHERCHE */
-    #search {
-        width: 67%;
+    #search_box {
+        width: 80%;
     }
-    #button_r {
-        border-radius: 12px;
-        display: initial;
-    }
-    #button {
+    #search_button {
         display: none;
     }
-
-    .heb_1, .heb_2, .popu_1, #zone, .heberg {
-        flex-direction: column;
+    #search_button_r {
+        display: initial;
+        margin-left: -10px;
+        border-radius: 12px;
     }
-
+   
     /* FILTRES */
-    .filtre {
-        margin: 0px 10px 10px 0px;
+    .filter {
+    margin: 0px 10px 10px 0px;
     }
+
+    /* SECTIONS HEBERGEMENTS */
+    #accommodation_marseille {
+        padding: 0px;
+    }
+    #accommodation_marseille a {
+        margin: 5px 0px;
+    }
+    #accommodation, #populare {
+        border-radius: 0px;
+    }
+
+    /* SECTION HEBERGEMENT */
+    #accommodation {
+        width: 100%;
+        background-color: white;
+    }
+    #accommodation .card {
+        height: 190px;
+    }
+
+    /* SECTION POPULAIRE */
+    #populare .card {
+        height: 130px;
+    }
+    #populare .card-image {
+        min-width: 40%;
+        width: 40%;
+    }
+
+    /* CARTES */
     .card-body {
-    font-size: medium;
+        font-size: medium;
     }
     .card-star {
         font-size: smaller;
     }
-
-    /* HEBERGEMENTS */
-    #heberg, #popu {
-        border-radius: 0px;
-    }
-    #accommodation {
-        padding: 0px;
-    }
     
-
-    #popu .card {
-        height: 130px;
-    }
-    #popu .card-image {
-        min-width: 40%;
-    }
-    #heberg {
-        width: 100%;
-        background-color: white;
-    }
-
     /* ACTIVITES */
     #activities {
         flex-wrap: nowrap;
         flex-direction: column;
     }
-    .container {
+    .container_box {
         width: 100%;
         margin-bottom: 20px;
     }
 
     /* FOOTER */
-    #footer {
+    #footer_box {
         flex-direction: column;
         align-items: center;
     }
     footer div {
-        width: 300px;
+        width: 100%;
         padding: 14px;
     }
 }

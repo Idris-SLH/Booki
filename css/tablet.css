@@ -1,29 +1,25 @@
 /* TABLET */
 @media all and (max-width: 992px) {
     /* FILTRES */
-    #zone {
+    #filter_zone {
         flex-direction: column;
     }
-    .filtre p {
-        margin-bottom: 0px;
-    }
-    
-    /* HEBERGEMENTS */
-    #accommodation {
+
+    /* SECTIONS HEBERGEMENTS */
+    #accommodation_marseille {
         flex-direction: column-reverse;
     }
-
-    #popu, #heberg  {
+    #populare, #accommodation  {
         width: 100%;
         margin-bottom: 20px;
         padding: 10px;
     }
-    .popu_1 {
+    
+    /* SECTION POPULAIRE */
+    #populare_card {
         flex-direction: row;
         justify-content: space-around;
     }
-
-    /* SECTION POPULAIRE */
 
     /* ACTIVITES */
     #activities {
@@ -34,7 +30,7 @@
         margin-top: -52px;
         padding: 17px 15px;
     }
-    .container {
+    .container_box {
         width: 45%;
         margin: 10px auto;
     }
